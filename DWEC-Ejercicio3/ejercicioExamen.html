@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio examen</title>
+<script>
+function ver(){
+let cifra=parseInt(document.getElementById("num").value);
+if(cifra > 0 && cifra < 10 ){
+    setTimeout(()=>{
+        
+        let tabla="";
+        let resultado=1;
+        for(let i=0;i<10;i++){
+resultado=i*cifra;
+tabla +=`<tr><td>${i+1}*${cifra}=${i+1*cifra}</td></tr>`;
+}
+document.querySelector("table").innerHTML=tabla;
+    },3000);
+
+
+}else{
+    document.getElementById("res").innerText="Error "+cifra; 
+}
+}
+</script>
+</head>
+<body>
+    <form>
+        <span id="res"></span>
+        <label>Numero:</label>
+        <input type="text" name="num" id="num">
+        <input type="button" value="Enviar" id="boton" onclick="ver()">
+    </form>
+    <table></table>
+    
+
+    
+</body>
+</html>

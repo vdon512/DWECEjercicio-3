@@ -15,7 +15,7 @@ if(cifra > 0 && cifra < 10 ){
         let resultado=1;
         for(let i=0;i<10;i++){
 resultado=i*cifra;
-tabla +=`<tr><td>${i+1}*${cifra}=${i+1*cifra}</td></tr>`;
+tabla +=`<tr><td>${i}*${cifra}=${resultado}</td></tr>`;
 }
 document.querySelector("table").innerHTML=tabla;
     },3000);
